@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { Product } from "../Product";
+import { useNavigate } from "react-router-dom";
 // import { useNavigate } from 'react-router-dom';
 import './index.css'
 
 export const ProductPicker = () => {
+  const navigate = useNavigate(); 
+
   const [products, setProducts] = useState([]);
+  const [selectedId, setSelectedId] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -17,6 +21,13 @@ export const ProductPicker = () => {
     
 }, [])
 
+  const selectHandler = (id) => {
+    setSelectedId(id)
+    navigate(`/product/${id}`);
+    
+
+  }
+
 console.log(products)
    
         return (
@@ -27,9 +38,10 @@ console.log(products)
                     <p>Nejnovější prémiové produkty od předních českých designerů.</p>
                     <p>Doprava zdarma až k vám domů, na cenu nehleďte.</p>
                 </div>
-              </div> 
+              </div>
+              <div>id of selected product: {selectedId}</div>
               <div className="products__container">
-                {products.map(p => <Product key={p.id} product={p}/>)}
+                {products.map(p => <Product key={p.id} product={p} onSelect={selectHandler}/>)}
               </div>
            
             </>
