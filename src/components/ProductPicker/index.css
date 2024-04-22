@@ -1,0 +1,23 @@
+.products__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+ 
+}
+ 
+  p {
+    margin: 0;
+  }
+  
+  .text-box {
+    text-align: center;
+    font-size: 20px;
+    color: grey;
+    font-weight: lighter;
+    margin: 50px 0;
+    text-align: center;
+  }
+  .title-box {
+    text-align: center;
+  }

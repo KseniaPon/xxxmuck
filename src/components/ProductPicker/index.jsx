@@ -28,7 +28,7 @@ export const ProductPicker = () => {
 
   }
 
-console.log(products)
+// console.log(products)
    
         return (
             <>
@@ -39,7 +39,7 @@ console.log(products)
                     <p>Doprava zdarma až k vám domů, na cenu nehleďte.</p>
                 </div>
               </div>
-              <div>id of selected product: {selectedId}</div>
+              
               <div className="products__container">
                 {products.map(p => <Product key={p.id} product={p} onSelect={selectHandler}/>)}
               </div>
