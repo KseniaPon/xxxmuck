@@ -23,6 +23,9 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    basename: "/xxxmuck" // name of github repository
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
