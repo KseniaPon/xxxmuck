@@ -9,16 +9,16 @@ import { ProductPicker } from './components/ProductPicker/index.jsx';
 
 const router = createBrowserRouter([
   {
-    path: '/xxxmuck',
+    path: '/',
     element: <App />,
     
     children: [
       {
-        path: '/xxxmuck',
+        path: '/',
         element: <ProductPicker />,
       },
       {
-        path: 'xxxmuck/product/:id',
+        path: 'product/:id',
         element: < ProductPage/>,
       }
     ]
