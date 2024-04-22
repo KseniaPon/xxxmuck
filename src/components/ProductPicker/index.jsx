@@ -23,7 +23,7 @@ export const ProductPicker = () => {
 
   const selectHandler = (id) => {
     setSelectedId(id)
-    navigate(`/product/${id}`);
+    navigate(`product/${id}`);
     
 
   }

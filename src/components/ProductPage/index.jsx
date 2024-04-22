@@ -12,7 +12,7 @@ export const ProductPage = () => {
             setProduct(data);
         }
         fetchProduct();
-        console.log(product)
+        // console.log(product)
     }, [])
 
     if (product !== null) {
