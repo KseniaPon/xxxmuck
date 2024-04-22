@@ -1,6 +1,7 @@
 import './index.css'
 
-export const Product = ({product, onSelect}) => {
+export const Product = (props) => {
+    const {product, onSelect} = props;
     const handleClick = () => {
     onSelect(product.id)
     }
@@ -13,3 +14,4 @@ export const Product = ({product, onSelect}) => {
     </div>
     )
 }
+
